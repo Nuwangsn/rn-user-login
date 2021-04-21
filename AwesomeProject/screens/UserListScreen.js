@@ -16,7 +16,11 @@ const UserListScreen = props => {
   console.log(loggedUser);
 
   if (!loggedUser) {
-    Alert.alert('Username or password in incorrect');
+    Alert.alert(
+      'Username or password in incorrect',
+      'Enter correct username or password',
+      [{text: 'Okay', onPress: () => props.navigation.navigate('login')}],
+    );
   }
 
   return (
